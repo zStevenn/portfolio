@@ -9,7 +9,7 @@ type BodyProps = {
 
 function Body({ children }: BodyProps) {
   return (
-    <body className={`${outfit.className} bg-neutral-100 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}>
+    <body className={`${outfit.className} bg-neutral-100 text-neutral-900 dark:text-neutral-100 dark:bg-neutral-950`}>
       {children}
     </body>
   )

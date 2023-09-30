@@ -1,16 +1,14 @@
 "use client"
 
 import { useNavContext } from '@/hooks/context/useNavContext'
-import React, { useLayoutEffect, useRef } from 'react'
-import animations from './animations'
 import useIsFirstRender from '@/hooks/useIsFirstRender'
+import { useLayoutEffect, useRef } from 'react'
+import animations from './animations'
 
 function Blur() {
   const blurRef = useRef<HTMLDivElement>(null)
   const isFirstRender = useIsFirstRender()
-  const { nav } = useNavContext()
-
-  const isOpen = nav === 'open'
+  const { isOpen, setNav } = useNavContext()
 
   useLayoutEffect(() => {
     if (!isFirstRender) {
@@ -23,12 +21,13 @@ function Blur() {
 
     return () => { animations.kill() }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [nav])
+  }, [isOpen])
 
   return (
     <div
       ref={blurRef}
-      className={`absolute inset-0 bg-neutral-700 ${isOpen ? 'z-40' : '-z-40'}`}
+      onClick={() => setNav("closed")}
+      className={`absolute inset-0 bg-neutral-700 opacity-0 ${isOpen ? 'z-40' : '-z-40'}`}
     />
   )
 }

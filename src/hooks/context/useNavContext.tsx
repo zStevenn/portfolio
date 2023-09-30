@@ -7,10 +7,11 @@ export const NavContext = createContext<NavContextProps | null>(null)
 
 export default function NavContextProvider({ children }: NavProviderProps) {
   const [nav, setNav] = useState<Nav>('closed')
+  const isOpen = nav === 'open'
 
   return (
     <NavContext.Provider
-      value={{ nav, setNav }}>
+      value={{ isOpen, nav, setNav }}>
       {children}
     </NavContext.Provider>
   )

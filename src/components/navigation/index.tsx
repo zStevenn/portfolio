@@ -1,16 +1,20 @@
 import NavContextProvider from "@/hooks/context/useNavContext"
-import ToggleNav from "./toggle-nav"
 import Blur from "./blur"
+import NavTop from "./nav-top"
+import DarkModeButton from "./toggle-darkmode"
+import NavLinks from "./nav-links"
+import NavButtons from "./nav-buttons"
+import NavContainer from "./nav-container"
 
 function Navigation() {
   return (
     <NavContextProvider>
-      <nav className="h-screen p-6 z-50">
-        <ToggleNav />
-        {/* Navigation links - potentieel met smooth scroll/snap scroll naar de juiste sectie op de pagina */}
-        {/* Knop contact - openen email naar mij sturen */}
-        {/* Knop download CV */}
-      </nav>
+      <NavContainer>
+        <NavTop />
+        <NavLinks />
+        <NavButtons />
+        <DarkModeButton />
+      </NavContainer>
       <Blur />
     </NavContextProvider>
   )
