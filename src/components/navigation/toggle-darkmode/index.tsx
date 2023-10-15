@@ -16,10 +16,10 @@ function DarkModeButton({ className }: DarkModeButtonProps) {
   }
   return (
     <button
-      className={`${isOpen ? "" : "hidden sm:block"} ${className}`}
+      className={`${isOpen ? "" : "hidden md:block"} ${className}`}
       onClick={toggleDarkmode}
     >
-      DarkModeButton
+      x
     </button>
   )
 }

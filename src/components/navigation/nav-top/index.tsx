@@ -4,7 +4,7 @@ import ToggleNav from './toggle-nav'
 function NavTop() {
   return (
     <div className='flex justify-between'>
-      <ToggleNav className='sm:hidden' />
+      <ToggleNav className='md:hidden' />
       <Logo />
     </div>
   )

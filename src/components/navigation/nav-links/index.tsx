@@ -1,17 +1,32 @@
 "use client"
 
 import { useNavContext } from '@/hooks/context/useNavContext'
-import React from 'react'
+import useViewportWidth from '@/hooks/useViewportWidth'
+import { useLayoutEffect, useState } from 'react'
 
 function NavLinks() {
   const { isOpen } = useNavContext()
+  const viewportWidth = useViewportWidth()
+
+  const [navStyling, setNavStyling] = useState<string>()
+
+  const navLinks = [
+    'Home',
+    'Studie',
+    'Ervaring',
+    'Contact'
+  ]
+
+  useLayoutEffect(() => {
+    const isMobile = viewportWidth < 768
+    setNavStyling(isMobile ? (isOpen ? "" : "hidden md:block") : "flex gap-4")
+  }, [isOpen, viewportWidth])
+
   return (
-    <ul className={`flex flex-col sm:flex-row sm:justify-center sm:items-center gap-4 ${isOpen ? "" : "hidden sm:block"}`}>
-      <li>test1</li>
-      <li>test1</li>
-      <li>test1</li>
-      <li>test1</li>
-      <li>test1</li>
+    <ul className={navStyling}>
+      {navLinks.map((navLink) => (
+        <li key={navLink}>{navLink}</li>
+      ))}
     </ul>
   )
 }
