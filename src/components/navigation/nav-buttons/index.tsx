@@ -1,13 +1,14 @@
 "use client"
 
+import Button from '@/components/ui/button'
 import { useNavContext } from '@/hooks/context/useNavContext'
 
 function NavButtons() {
   const { isOpen } = useNavContext()
   return (
-    <div className={`${isOpen ? "" : "hidden md:block"}`}>
-      <button className='border px-2 py-1'>Contact</button>
-      <button className='border px-2 py-1 md:ml-4'>Download CV</button>
+    <div className={`${isOpen ? "" : "hidden md:flex gap-4"}`}>
+      <Button>Contact</Button>
+      <Button>Download</Button>
     </div>
   )
 }
