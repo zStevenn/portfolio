@@ -37,7 +37,7 @@ function ToggleNav({ className }: ToggleNavProps) {
   return (
     <button
       onClick={toggleNav}
-      className={`relative p-1 h-6 w-6 ${className}`}
+      className={`relative p-1 h-6 w-6 ${className} active:scale-95`}
       title='Open navigatie'
     >
       <Bars3Icon
