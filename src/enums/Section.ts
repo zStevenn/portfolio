@@ -1,8 +1,8 @@
 enum SectionEnum {
-	Introduction = "introduction",
-	Work = "work",
+	Introduction = "introductie",
+	Work = "werk",
 	Contact = "contact",
-	Study = "study",
+	Study = "studie",
 }
 
 export default SectionEnum

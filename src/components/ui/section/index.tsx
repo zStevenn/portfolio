@@ -11,7 +11,7 @@ function Section({ children, id, backgroundColor }: SectionProps) {
 
   return (
     <section id={id} className={bgColor}>
-      <div className='md:container md:mx-auto px-4'>
+      <div className='md:container md:mx-auto px-4 min-h-screen'>
         {children}
       </div>
     </section>

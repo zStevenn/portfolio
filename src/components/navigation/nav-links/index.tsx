@@ -3,6 +3,8 @@
 import { useNavContext } from '@/hooks/context/useNavContext'
 import useViewportWidth from '@/hooks/useViewportWidth'
 import { useLayoutEffect, useState } from 'react'
+import NavLink from './nav-link'
+import SectionEnum from '@/enums/Section'
 
 function NavLinks() {
   const { isOpen } = useNavContext()
@@ -11,11 +13,11 @@ function NavLinks() {
   const [navStyling, setNavStyling] = useState<string>()
 
   const navLinks = [
-    'Home',
-    'Studie',
-    'Ervaring',
-    'Contact'
-  ]
+    { name: 'Home', id: SectionEnum.Introduction },
+    { name: 'Werk', id: SectionEnum.Work },
+    { name: 'Studie', id: SectionEnum.Study },
+    { name: 'Contact', id: SectionEnum.Contact },
+  ];
 
   useLayoutEffect(() => {
     const isMobile = viewportWidth < 768
@@ -25,7 +27,7 @@ function NavLinks() {
   return (
     <ul className={navStyling}>
       {navLinks.map((navLink) => (
-        <li key={navLink}>{navLink}</li>
+        <NavLink key={navLink.id} name={navLink.name} id={navLink.id} />
       ))}
     </ul>
   )
