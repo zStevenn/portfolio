@@ -1,5 +1,5 @@
 import Occupation from "@/components/home/hero/occupation";
-import WorkCard from "@/components/home/work/card";
+import WorkCard from "@/components/work/card";
 import Navigation from "@/components/navigation";
 import P from "@/components/ui/p";
 import Section from "@/components/ui/section";
