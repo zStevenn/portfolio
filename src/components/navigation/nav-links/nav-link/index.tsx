@@ -19,7 +19,7 @@ function NavLink({ name, id }: NavLinkProps) {
     if (section) {
       window.scrollTo({
         behavior: "smooth",
-        top: section.offsetTop - 40
+        top: section.offsetTop
       })
     }
   }
