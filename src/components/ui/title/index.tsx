@@ -1,7 +1,7 @@
 import { shantell_sans } from "@/fonts";
 
 type TitleProps = {
-  children: string;
+  children: string
 }
 
 function Title({ children }: TitleProps) {
