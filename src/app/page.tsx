@@ -20,6 +20,9 @@ export default function Home() {
           <p className={`text-lg md:text-xl ${shantell_sans.className}`}>
             {introductionString}
           </p>
+          <p className={`text-lg md:text-xl inline pr-2 ${shantell_sans.className}`}>
+            Sinds juli 2022 werkzaam als een
+          </p>
           <Occupation />
         </div>
       </Section>

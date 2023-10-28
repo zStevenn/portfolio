@@ -6,7 +6,7 @@ import { gsap } from "gsap"
 import { useEffect, useRef, useState } from "react"
 
 function Occupation() {
-  const occupationRef = useRef<HTMLSpanElement>(null)
+  const occupationRef = useRef<HTMLParagraphElement>(null)
 
   const arr = [
     'Software Engineer',
@@ -20,22 +20,24 @@ function Occupation() {
   const animation = gsap.context((self) => {
     self.add("play", () => {
       gsap.to(occupationRef.current, {
-        translateY: '3vh',
-        duration: 1
+        translateX: "-3vh",
+        ease: "power.out",
+        duration: 1,
       })
       gsap.to(occupationRef.current, {
         opacity: 0,
-        duration: 0.3
+        duration: 0.5
       })
       gsap.to(occupationRef.current, {
-        translateY: 0,
+        translateX: 0,
         duration: 1,
-        delay: 1,
+        ease: "back.out",
+        delay: 1
       })
       gsap.to(occupationRef.current, {
         opacity: 1,
         duration: 0.5,
-        delay: 1.5
+        delay: 1
       })
     })
   })
@@ -51,25 +53,18 @@ function Occupation() {
 
     return () => {
       clearInterval(interval)
-      animation.kill()
+      animation.revert()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
-    <div>
-      <p className={`text-lg md:text-xl inline pr-2 ${shantell_sans.className}`}>
-        Ik ben een
-      </p>
-      <div className={`text-lg md:text-xl inline ${shantell_sans.className}`}>
-        <span
-          ref={occupationRef}
-          className='text-red-500/90 absolute'
-        >
-          {activeJob}
-        </span>
-      </div>
-    </div>
+    <p
+      ref={occupationRef}
+      className={`text-red-500/90 text-lg md:text-xl ${shantell_sans.className}`}
+    >
+      {activeJob}
+    </p>
   )
 }
 
