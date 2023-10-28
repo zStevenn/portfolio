@@ -1,6 +1,6 @@
 import Occupation from "@/components/home/hero/occupation";
+import WorkCard from "@/components/home/work/card";
 import Navigation from "@/components/navigation";
-import Card from "@/components/ui/card";
 import P from "@/components/ui/p";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
@@ -25,29 +25,37 @@ export default function Home() {
           </p>
           <Occupation />
         </div>
+
+        <div className="pt-16">
+          <Title>Mijn vaardigheden</Title>
+          <div className="flex">
+
+          </div>
+        </div>
       </Section>
       <Section
         id={SectionEnum.Work}
       >
-        <Title>Werk</Title>
+        <Title>Mijn werk</Title>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <Card
-            title="awegaweg"
-            date="aweg aweg aw"
-            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+          <WorkCard
+            title="Cafetaria de Sluis"
+            date="2022 - 2023"
+            description="Geholpen bij het renoveren van de website en verbeteren van Search Engine Optimization (SEO)."
             imageSrc="https://placekitten.com/g/200/150"
-            tags={['hi']}
+            tags={['seo', 'cafetaria de Sluis', 'renovatie']}
           />
-          <Card
-            title="awegaweg"
-            date="aweg aweg aw"
-            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+          <WorkCard
+            title="Kaizen Tracker"
+            date="2023 - 2024"
+            description="Een applicatie ontworpen om gemakkelijk je kleine winsten bij te houden"
             imageSrc="https://placekitten.com/g/200/150"
+            tags={['kaizen', 'improvement', 'tracker']}
           />
-          <Card
-            title="awegaweg"
-            date="aweg aweg aw"
-            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+          <WorkCard
+            title="Nog iets"
+            date="xoxo iets anders"
+            description="Hihiohoaiwepgiajwopegijaweg"
             imageSrc="https://placekitten.com/g/200/150"
           />
         </div>
