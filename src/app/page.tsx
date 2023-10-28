@@ -1,5 +1,6 @@
 import Occupation from "@/components/home/hero/occupation";
 import Navigation from "@/components/navigation";
+import Card from "@/components/ui/card";
 import P from "@/components/ui/p";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
@@ -25,7 +26,27 @@ export default function Home() {
         id={SectionEnum.Work}
       >
         <Title>Werk</Title>
-        <P>Werkomschrijving hieronder</P>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Card
+            title="awegaweg"
+            date="aweg aweg aw"
+            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+            imageSrc="https://placekitten.com/g/200/150"
+            tags={['hi']}
+          />
+          <Card
+            title="awegaweg"
+            date="aweg aweg aw"
+            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+            imageSrc="https://placekitten.com/g/200/150"
+          />
+          <Card
+            title="awegaweg"
+            date="aweg aweg aw"
+            description="apwoeigjpawoiejgpoawijegpoaijweg awpiegapowi ejgpoawiej gpoaiwj epogaiwj peogi"
+            imageSrc="https://placekitten.com/g/200/150"
+          />
+        </div>
       </Section>
       <Section
         id={SectionEnum.Study}
