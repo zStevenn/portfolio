@@ -1,5 +1,7 @@
 import Occupation from "@/components/home/hero/occupation";
 import Navigation from "@/components/navigation";
+import Section from "@/components/ui/section";
+import SectionEnum from "@/enums/Section";
 
 export default function Home() {
   const introductionString = `Hoi, ik ben Steven`
@@ -7,12 +9,32 @@ export default function Home() {
   return (
     <main className="relative grid min-h-screen">
       <Navigation />
-      <div className="mt-28 px-4 flex flex-col gap-4">
-        <p className="text-xl">
-          {introductionString}
-        </p>
-        <Occupation />
-      </div>
+      <Section
+        id={SectionEnum.Introduction}
+      >
+        <div className="flex flex-col gap-4 mt-24">
+          <p className="text-xl">
+            {introductionString}
+          </p>
+          <Occupation />
+        </div>
+
+      </Section>
+      <Section
+        id={SectionEnum.Work}
+      >
+        <p>Werk</p>
+      </Section>
+      <Section
+        id={SectionEnum.Study}
+      >
+        <p>Studie</p>
+      </Section>
+      <Section
+        id={SectionEnum.Contact}
+      >
+        <p>Contact</p>
+      </Section>
     </main>
   )
 }
