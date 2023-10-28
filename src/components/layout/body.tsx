@@ -1,7 +1,5 @@
-import { Outfit } from 'next/font/google'
+import { outfit } from '@/fonts'
 import React from 'react'
-
-const outfit = Outfit({ subsets: ['latin'] })
 
 type BodyProps = {
   children: React.ReactNode

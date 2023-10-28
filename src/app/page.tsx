@@ -1,6 +1,7 @@
 import Occupation from "@/components/home/hero/occupation";
 import Navigation from "@/components/navigation";
 import Section from "@/components/ui/section";
+import Title from "@/components/ui/title";
 import SectionEnum from "@/enums/Section";
 
 export default function Home() {
@@ -18,22 +19,21 @@ export default function Home() {
           </p>
           <Occupation />
         </div>
-
       </Section>
       <Section
         id={SectionEnum.Work}
       >
-        <p>Werk</p>
+        <Title>Werk</Title>
       </Section>
       <Section
         id={SectionEnum.Study}
       >
-        <p>Studie</p>
+        <Title>Studie</Title>
       </Section>
       <Section
         id={SectionEnum.Contact}
       >
-        <p>Contact</p>
+        <Title>Contact</Title>
       </Section>
     </main>
   )
