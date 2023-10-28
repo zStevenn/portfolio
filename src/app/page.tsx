@@ -5,9 +5,10 @@ import P from "@/components/ui/p";
 import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
 import SectionEnum from "@/enums/Section";
+import { shantell_sans } from "@/fonts";
 
 export default function Home() {
-  const introductionString = `Hoi, ik ben Steven`
+  const introductionString = `Hoi, ik ben Steven!`
 
   return (
     <main className="relative grid min-h-screen">
@@ -16,7 +17,7 @@ export default function Home() {
         id={SectionEnum.Introduction}
       >
         <div className="flex flex-col gap-4 mt-24">
-          <p className="text-xl">
+          <p className={`text-lg md:text-xl ${shantell_sans.className}`}>
             {introductionString}
           </p>
           <Occupation />

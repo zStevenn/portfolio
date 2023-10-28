@@ -1,5 +1,6 @@
 "use client"
 
+import { shantell_sans } from "@/fonts"
 import delay from "@/helpers/delay"
 import { gsap } from "gsap"
 import { useEffect, useRef, useState } from "react"
@@ -57,11 +58,10 @@ function Occupation() {
 
   return (
     <div>
-      <p className="text-xl inline">
+      <p className={`text-lg md:text-xl inline pr-2 ${shantell_sans.className}`}>
         Ik ben een
-        &nbsp;
       </p>
-      <div className="text-xl inline">
+      <div className={`text-lg md:text-xl inline ${shantell_sans.className}`}>
         <span
           ref={occupationRef}
           className='text-red-500/90 absolute'
