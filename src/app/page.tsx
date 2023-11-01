@@ -6,6 +6,8 @@ import Section from "@/components/ui/section";
 import Title from "@/components/ui/title";
 import SectionEnum from "@/enums/Section";
 import { shantell_sans } from "@/fonts";
+import CardContainer from "@/components/ui/card/container";
+import { SiTailwindcss, SiReact, SiAzuredevops, SiGreensock, SiFigma } from "react-icons/si";
 
 export default function Home() {
   const introductionString = `Hoi, ik ben Steven!`
@@ -28,8 +30,37 @@ export default function Home() {
 
         <div className="pt-16">
           <Title>Mijn vaardigheden</Title>
-          <div className="flex">
-
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <CardContainer className="flex flex-col justify-center items-center gap-4 p-8">
+              <>
+                <SiReact className="text-6xl" />
+                React (Native)
+              </>
+            </CardContainer>
+            <CardContainer className="flex flex-col justify-center items-center gap-4 p-8">
+              <>
+                <SiTailwindcss className="text-6xl" />
+                Tailwind CSS
+              </>
+            </CardContainer>
+            <CardContainer className="flex flex-col justify-center items-center gap-4 p-8">
+              <>
+                <SiAzuredevops className="text-6xl" />
+                Azure
+              </>
+            </CardContainer>
+            <CardContainer className="flex flex-col justify-center items-center gap-4 p-8">
+              <>
+                <SiGreensock className="text-6xl" />
+                Animations
+              </>
+            </CardContainer>
+            <CardContainer className="flex flex-col justify-center items-center gap-4 p-8">
+              <>
+                <SiFigma className="text-6xl" />
+                Designing
+              </>
+            </CardContainer>
           </div>
         </div>
       </Section>
