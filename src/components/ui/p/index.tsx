@@ -8,7 +8,7 @@ type PProps = {
 function P({ children, ref }: PProps) {
   return (
     <p
-      className='text-base md:text-lg lg:text-xl'
+      className='text-base md:text-lg lg:text-xl transition-all'
       ref={ref}
     >
       {children}
