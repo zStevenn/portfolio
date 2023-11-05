@@ -2,7 +2,7 @@ enum SectionEnum {
 	Introduction = "introductie",
 	Projects = "projecten",
 	Contact = "contact",
-	Study = "studie",
+	Experience = "ervaring",
 }
 
 export default SectionEnum

@@ -10,7 +10,7 @@ function Links({ className }: LinksProps) {
   const navLinks = [
     { name: 'Home', id: SectionEnum.Introduction },
     { name: 'Projecten', id: SectionEnum.Projects },
-    { name: 'Studie', id: SectionEnum.Study },
+    { name: 'Ervaring', id: SectionEnum.Experience },
     { name: 'Contact', id: SectionEnum.Contact },
   ];
 

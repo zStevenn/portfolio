@@ -79,7 +79,7 @@ export default function Home() {
         </div>
       </Section>
       <Section
-        id={SectionEnum.Study}
+        id={SectionEnum.Experience}
       >
         <Title>Studie</Title>
         <P>Studieomschrijving hieronder</P>
