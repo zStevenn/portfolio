@@ -21,7 +21,6 @@ export default function ThemeContextProvider({ children }: ThemeProviderProps) {
   useLayoutEffect(() => {
     if (typeof Window !== "undefined" && window.localStorage) {
       const storedTheme = localStorage.getItem("darkMode")
-      console.log(storedTheme)
       if (storedTheme) setTheme(storedTheme as Theme)
     }
   }, [])
