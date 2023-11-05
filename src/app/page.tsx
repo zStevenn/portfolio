@@ -65,9 +65,9 @@ export default function Home() {
         </div>
       </Section>
       <Section
-        id={SectionEnum.Work}
+        id={SectionEnum.Projects}
       >
-        <Title>Mijn werk</Title>
+        <Title>Mijn projecten</Title>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <WorkCard
             title="Cafetaria de Sluis"

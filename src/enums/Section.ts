@@ -1,6 +1,6 @@
 enum SectionEnum {
 	Introduction = "introductie",
-	Work = "werk",
+	Projects = "projecten",
 	Contact = "contact",
 	Study = "studie",
 }
