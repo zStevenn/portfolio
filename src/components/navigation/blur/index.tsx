@@ -8,7 +8,7 @@ import animations from './animations'
 function Blur() {
   const blurRef = useRef<HTMLDivElement>(null)
   const isFirstRender = useIsFirstRender()
-  const { isOpen, setNav } = useNavContext()
+  const { isOpen, closeNav } = useNavContext()
 
   useLayoutEffect(() => {
     if (!isFirstRender) {
@@ -26,7 +26,7 @@ function Blur() {
   return (
     <div
       ref={blurRef}
-      onClick={() => setNav("closed")}
+      onClick={closeNav}
       className={`absolute inset-0 bg-neutral-700 opacity-0 ${isOpen ? 'z-40' : '-z-40'}`}
     />
   )

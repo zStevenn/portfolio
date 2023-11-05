@@ -1,6 +1,7 @@
 "use client"
 
 import SectionEnum from "@/enums/Section";
+import { useNavContext } from "@/hooks/context/useNavContext";
 import Link from "next/link";
 import { MouseEvent } from "react";
 
@@ -10,6 +11,7 @@ type NavLinkProps = {
 }
 
 function NavLink({ name, id }: NavLinkProps) {
+  const { isOpen, closeNav } = useNavContext()
 
   const sectionId = `#${id}`
 
@@ -19,14 +21,15 @@ function NavLink({ name, id }: NavLinkProps) {
     if (section) {
       window.scrollTo({
         behavior: "smooth",
-        top: section.offsetTop
+        top: section.offsetTop - 50
       })
     }
   }
 
   function handleLinkClick(e: MouseEvent<HTMLAnchorElement>) {
-    e.preventDefault();
+    e.preventDefault()
     smoothScrollToSection()
+    if (isOpen) closeNav()
   }
 
   return (

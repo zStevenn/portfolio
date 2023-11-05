@@ -1,6 +1,5 @@
 "use client"
 
-import { useNavContext } from "@/hooks/context/useNavContext";
 import { useThemeContext } from "@/hooks/context/useThemeContext";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import { useRef } from "react";
@@ -11,7 +10,6 @@ type DarkModeButtonProps = {
 
 function DarkModeButton({ className }: DarkModeButtonProps) {
   const iconContainerRef = useRef<HTMLDivElement>(null)
-  const { isOpen } = useNavContext()
   const { theme, setTheme } = useThemeContext()
 
   const isDarkMode = theme === 'dark'
@@ -22,7 +20,7 @@ function DarkModeButton({ className }: DarkModeButtonProps) {
 
   return (
     <button
-      className={`${isOpen ? "" : "hidden md:block"} ${className ? className : ""} bg-neutral-100 dark:bg-neutral-900 rounded-[18px] w-20 h-10 relative border-2 border-neutral-700 dark:border-neutral-100`}
+      className={`${className ? className : ""} bg-neutral-100 dark:bg-neutral-900 rounded-[18px] w-20 h-10 relative border-2 border-neutral-700 dark:border-neutral-100`}
       onClick={toggleDarkmode}
     >
       <div
