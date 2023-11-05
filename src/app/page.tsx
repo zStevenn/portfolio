@@ -8,6 +8,7 @@ import SectionEnum from "@/enums/Section";
 import { shantell_sans } from "@/fonts";
 import CardContainer from "@/components/ui/card/container";
 import { SiTailwindcss, SiReact, SiAzuredevops, SiGreensock, SiFigma } from "react-icons/si";
+import ExperienceCard from "@/components/experience/card";
 
 export default function Home() {
   const introductionString = `Hoi, ik ben Steven!`
@@ -81,8 +82,39 @@ export default function Home() {
       <Section
         id={SectionEnum.Experience}
       >
-        <Title>Studie</Title>
-        <P>Studieomschrijving hieronder</P>
+        <Title>Ervaring</Title>
+        <div className="grid grid-cols-1 gap-4">
+          <ExperienceCard
+            company="Cow Hills Retail B.V."
+            role="Junior Software Engineer"
+            date="juni 2023 - heden"
+            description="Het uitwerken van aangeleverde UI/UX designs in onze React / React Native applicaties en onderhouden van code kwaliteit."
+          />
+          <ExperienceCard
+            company="MBO Utrecht"
+            role="Studie Software Developer (Niveau 4)"
+            date="20 juni 2023 - Diploma behaald"
+            description="Het opbouwen van een sterke basis in HTML, CSS, JavaScript, PHP, SQL Databases & Agile methodologieën."
+          />
+          {/* <ExperienceCard
+            company="Udemy"
+            role="Next.js & React Cursus"
+            date="16 Mei 2023 - heden"
+            description=""
+          /> */}
+          <ExperienceCard
+            company="Udemy"
+            role="UI/UX & Figma Cursus"
+            date="25 April 2023 - 12 mei 2023 - Certificaat behaald"
+            description=""
+          />
+          <ExperienceCard
+            company="Sellvation Marketing B.V."
+            role="Stagiar Software Developer"
+            date="augustus 2022 - mei 2023"
+            description="Ontwerpen en bouwen van nieuwe webpagina's binnen het EMS-software van Sellvation. Creëren, testen en implementeren van op maat gemaakte e-mails voor klanten zoals PLUS, Coop & Xenos."
+          />
+        </div>
       </Section>
       <Section
         id={SectionEnum.Contact}
