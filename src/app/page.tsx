@@ -72,22 +72,9 @@ export default function Home() {
           <WorkCard
             title="Cafetaria de Sluis"
             date="2022 - 2023"
-            description="Geholpen bij het renoveren van de website en verbeteren van Search Engine Optimization (SEO)."
-            imageSrc="https://placekitten.com/g/200/150"
+            description="Renoveren en herdesignen van de website van Cafetaria de Sluis. Verbeteren van SEO (Search Engine Optimization)."
+            imageSrc="/cafetariadesluis.png"
             tags={['seo', 'cafetaria de Sluis', 'renovatie']}
-          />
-          <WorkCard
-            title="Kaizen Tracker"
-            date="2023 - 2024"
-            description="Een applicatie ontworpen om gemakkelijk je kleine winsten bij te houden"
-            imageSrc="https://placekitten.com/g/200/150"
-            tags={['kaizen', 'improvement', 'tracker']}
-          />
-          <WorkCard
-            title="Nog iets"
-            date="xoxo iets anders"
-            description="Hihiohoaiwepgiajwopegijaweg"
-            imageSrc="https://placekitten.com/g/200/150"
           />
         </div>
       </Section>
